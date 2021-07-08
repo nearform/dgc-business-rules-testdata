@@ -1,5 +1,5 @@
 {
-  "name": "dt=2021-07-09, now=2021-07-10 -> true",
+  "name": "dt=2021-07-09, now=2021-07-10 -> false",
   "payload": {
     "v": [
       {
@@ -7,7 +7,7 @@
       }
     ]
   },
-  "expected": true,
+  "expected": false,
   "external": {
     "validationClock": "2021-07-10T00:00:00+00:00",
     "valueSets": {

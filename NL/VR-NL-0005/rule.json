@@ -10,7 +10,7 @@
   "Description": [
     {
       "lang": "en",
-      "desc": "From Saturday July 10th 2021 onwards, a finished vaccination course is considered effective 14 days after the last vaccination, but effective immediately from the last vaccination before that date."
+      "desc": "From Saturday July 10th 2021 onwards, a finished vaccination course is considered effective 14 days after the last vaccination."
     }
   ],
   "ValidFrom": "2021-07-10T00:00:00Z",
@@ -27,11 +27,11 @@
       {
         "if": [
           {
-            "before": [
+            "not-before": [
               {
                 "plusTime": [
                   {
-                    "var": "payload.v.0.dt"
+                    "var": "external.validationClock"
                   },
                   0,
                   "day"
@@ -62,7 +62,7 @@
                   {
                     "var": "payload.v.0.dt"
                   },
-                  0,
+                  14,
                   "day"
                 ]
               }
@@ -84,7 +84,7 @@
                   {
                     "var": "payload.v.0.dt"
                   },
-                  14,
+                  0,
                   "day"
                 ]
               }
